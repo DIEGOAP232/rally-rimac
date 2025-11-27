@@ -1,0 +1,195 @@
+/* === PALETA DE COLORES === */
+:root {
+    --bg-beige: #F3E7D2;
+    --green-btn: #4A8C3A;
+    --green-btn-hover: #3C6E2E;
+}
+
+/* === FONDO CREMA === */
+.bg-passport {
+    background: var(--bg-beige);
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+/* === CONTENEDOR CENTRADO PERFECTO === */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* === TARJETA QUE SOBRESALE === */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 300px;
+}
+
+/* === IMAGEN PRINCIPAL === */
+.passport-img {
+    width: 230px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* === BOTÓN ENTRAR === */
+.btn-enter {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: var(--green-btn);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-enter:hover {
+    background: var(--green-btn-hover);
+}
+
+/* === CONTENEDOR GENERAL DIVIDIDO === */
+.register-container {
+    max-width: 900px;
+    margin: 60px auto;
+    display: flex;
+    background: #fff8ef;
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* === PANEL DE LA IMAGEN === */
+.image-panel {
+    width: 45%;
+    background: var(--bg-beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.side-image {
+    width: 85%;
+    max-width: 350px;
+}
+
+/* === PANEL DEL FORMULARIO === */
+.form-panel {
+    width: 55%;
+    padding: 40px 35px;
+}
+
+/* === TÍTULO === */
+.title-green {
+    color: var(--green-title);
+    margin-bottom: 20px;
+}
+
+/* === FORM === */
+label {
+    display: block;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 12px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #D6C3A6;
+    border-radius: 8px;
+    background: #fff;
+    outline: none;
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: var(--green-title);
+}
+
+.btn-form {
+    width: 100%;
+    padding: 12px;
+    background: var(--green-btn);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-form:hover {
+    background: var(--green-btn-hover);
+}
+
+/* === JUEGO === */
+
+.game-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.subtitle {
+    color: #4A4A4A;
+    margin-top: -8px;
+    margin-bottom: 30px;
+}
+
+.game-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Caja del mapa */
+
+.map-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+    width: 620px;
+}
+
+.map-image {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Leyenda */
+
+.legend-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    width: 330px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+}
+
+.legend-title {
+    color: var(--green-title);
+    margin-bottom: 15px;
+}
+
+.legend-list {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    font-size: 17px;
+    line-height: 1.8;
+}
