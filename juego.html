@@ -1,162 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CHIFLEPOPS | Snacks y Sabor</title>
-    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Ruta 1</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-passport">
 
-<!-- ====================== HEADER ====================== -->
-<header class="header">
+<div class="game-container">
 
-    <!-- BARRA SUPERIOR -->
-    <div class="top-bar">
-        <span>Envíos a todo el país | Calidad artesanal</span>
-    </div>
+    <h1 class="title-green">RUTA 1</h1>
+    <h3 class="subtitle">Rally Cultural – Rímac Ñanninta Purispa</h3>
 
-    <!-- HEADER PRINCIPAL -->
-    <div class="header-main">
+    <div class="game-content">
 
-        <!-- LOGO -->
-        <div class="header-logo">
-            <h1>CHIFLEPOPS</h1>
+        <!-- Mapa -->
+        <div class="map-box">
+            <img src="img/ruta1mapa.jpeg" alt="Mapa cultural" class="map-image">
         </div>
 
-        <!-- BUSCADOR -->
-        <form action="buscar.php" method="GET" class="search-bar">
-            <input type="text" name="q" placeholder="Buscar productos..." required>
-            <button type="submit" class="search-btn">🔍</button>
-        </form>
+        <!-- Leyenda -->
+        <div class="legend-box">
+            <h2 class="legend-title">Leyenda del Recorrido</h2>
 
-        <!-- USUARIO -->
-        <div class="header-user">
+            <ul class="legend-list">
+                <li>🎊 Fiesta de Amancaes</li>
+                <li>🌊 Río Rímac</li>
+                <li>📜 Alameda de los Descalzos</li>
+                <li>🏛 Paseo de las Aguas</li>
+                <li>🏛 Plaza de Acho</li>
+            </ul>
 
-            <?php if (isset($_SESSION["id_usuario"]) && $_SESSION["rol"] === "cliente"): ?>
-                <a href="carrito.php" class="btn-header cart">🛒 Carrito</a>
-                <a href="cliente/perfil.php" class="btn-header">👤 Mi Perfil</a>
-                <a href="logout.php" class="btn-header logout">⛔ Salir</a>
-            <?php else: ?>
-                <a href="login.php" class="btn-header login">🔐 Iniciar sesión</a>
-            <?php endif; ?>
-
+            <button class="btn-form" style="margin-top: 20px;">
+                Continuar
+            </button>
         </div>
     </div>
 
-    <!-- MENÚ PRINCIPAL -->
-    <nav class="header-menu">
-        <a href="index.php">Inicio</a>
-        <a href="productos.php">Productos</a>
-        <a href="contacto.php">Contacto</a>
-        <a href="nosotros.php">Nosotros</a>
-    </nav>
-
-</header>
-
-
-
-
-<!-- ====================== SLIDER ====================== -->
-<section class="slider-container">
-
-    <div class="slider">
-        <div class="slide active">
-            <img src="assets/img/slider1.webp">
-        </div>
-        <div class="slide">
-            <img src="assets/img/slider2.jpg">
-        </div>
-        <div class="slide">
-            <img src="assets/img/slider3.jpg">
-        </div>
-    </div>
-
-    <span class="slider-btn prev">&#10094;</span>
-    <span class="slider-btn next">&#10095;</span>
-</section>
-
-
-
-<!-- ====================== BANNERS ====================== -->
-<section class="promos">
-    <div class="promo-card amarillo">
-        <h2>DELIVERY GRATIS</h2>
-        <p>En pedidos mayores a S/ 50.00</p>
-    </div>
-
-    <div class="promo-card azul">
-        <h2>TUS SNACKS FAVORITOS</h2>
-        <p>De nuestra mesa a la tuya</p>
-    </div>
-</section>
-
-
-
-<!-- ====================== LOS MÁS VENDIDOS ====================== -->
-<section class="productos-section">
-    <h2>Los más vendidos</h2>
-    <p>Los productos que eligen nuestros clientes</p>
-
-    <div class="productos-grid">
-        <?php while ($p = $masVendidos->fetch_assoc()) { ?>
-        <div class="producto-card">
-            <img src="uploads/<?= $p['imagen'] ?>" alt="<?= $p['nombre'] ?>">
-            
-            <h3><?= $p['nombre'] ?></h3>
-            <span class="precio">S/<?= number_format($p['precio'], 2) ?></span>
-
-            <a class="btn-ver" href="producto_detalle.php?id=<?= $p['id_producto'] ?>">Ver Producto</a>
-        </div>
-        <?php } ?>
-    </div>
-</section>
-
-
-
-<!-- ====================== MÁS PRODUCTOS ====================== -->
-<section class="productos-section">
-    <h2>Más productos</h2>
-    <p>Descubre nuestra variedad</p>
-
-    <div class="productos-grid">
-        <?php while ($p = $masProductos->fetch_assoc()) { ?>
-        <div class="producto-card">
-            <img src="uploads/<?= $p['imagen'] ?>" alt="<?= $p['nombre'] ?>">
-            
-            <h3><?= $p['nombre'] ?></h3>
-            <span class="precio">S/<?= number_format($p['precio'], 2) ?></span>
-
-            <a class="btn-carrito" href="carrito_agregar.php?id=<?= $p['id_producto'] ?>">
-                Añadir al carrito
-            </a>
-        </div>
-        <?php } ?>
-    </div>
-</section>
-
-
-
-<!-- ====================== SECCIÓN INFORMATIVA ====================== -->
-<section class="section-info">
-    <h2>Un sabor que conecta</h2>
-    <p>
-        En CHIFLEPOPS creamos snacks con tradición, calidad y ese toque artesanal que te transporta a casa.
-        Nuestros productos están hechos con ingredientes naturales para brindarte una experiencia auténtica
-        en cada bocado.
-    </p>
-</section>
-
-
-
-<!-- ====================== FOOTER ====================== -->
-<footer class="footer">
-    <p>© 2025 CHIFLEPOPS | Todos los derechos reservados</p>
-</footer>
-
-
-<!-- ====================== SCRIPT DEL SLIDER ====================== -->
-<script src="assets/js/slider.js"></script>
+</div>
 
 </body>
 </html>
+
