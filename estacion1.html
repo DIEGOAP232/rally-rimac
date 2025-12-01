@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estación 1 – Fiesta de Amancaes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body class="bg-passport">
+
+<dclasss="timeline-container">
+
+    <h1 class="title-green">🎊 Fiesta de Amancaes</h1>
+    <h3 class="subtitle">Estación 1 del Rally Cultural</h3>
+
+    <div class="station-box">
+
+        <img src="img/amancaes.jpg" class="station-img">
+
+        <p class="station-desc">
+            La Fiesta de Amancaes es uno de los eventos tradicionales
+            markBadge("est1_llegada");
+            más antiguos del Rímac. ¡Bienvenido a la primera estación
+            del Rally Cultural!
+        </p>
+
+        <h3 class="video-title">🎥 Video Informativo</h3>
+
+        <video id="videoAmancaes" width="100%" controls>
+            <source src="videos/Amancaes.mp4" type="video/mp4">
+        </video>
+
+       <button id="btnQuiz1" class="btn-form" onclick="goGoogleQuiz()">
+        Resolver el Quiz
+        </button>
+        <button class="btn-form" style="margin-top:20px;" onclick="volverRuta()">
+        ⬅ Volver a la Ruta
+        </button>
+
+        <button class="btn-form" style="margin-top:10px;" onclick="irEstacion2()">
+        ➜ Siguiente Estación
+        </button>
+    </div>
+</div>
+<script>
+    // Insignia de llegada
+    markBadge("est1_llegada");
+
+    const video = document.getElementById("videoAmancaes");
+    const btn = document.getElementById("btnQuiz1");
+
+    // Método principal
+    video.onended = enableQuiz;
+
+    // Métodos de refuerzo por si falla onended
+    video.addEventListener("ended", enableQuiz);
+    video.addEventListener("pause", () => {
+        if (video.currentTime >= video.duration - 0.2) {
+            enableQuiz();
+        }
+    });
+
+    function enableQuiz() {
+        if (btn.disabled) {
+            btn.disabled = false;
+            markBadge("est1_video");
+        }
+    }
+</script>
+
+
+    <div id="popupInsignia" class="badge-popup">🏅 Insignia obtenida</div>
+
+</body>
+</html>

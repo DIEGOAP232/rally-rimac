@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estación 4 – Paseo de Aguas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body class="bg-passport">
+
+<div class="timeline-container">
+
+    <h1 class="title-green">🏛 Paseo de Aguas</h1>
+    <h3 class="subtitle">Estación 4 del Rally Cultural</h3>
+
+    <div class="station-box">
+
+        <!-- Imagen -->
+        <img src="img/aguas.jpg" class="station-img">
+
+        <p class="station-desc">
+            El Paseo de Aguas es una obra monumental del siglo XVIII,
+            construida durante el gobierno del virrey Amat y Juniet.
+            Su estructura y estilo neoclásico lo convierten en uno de los monumentos más
+            representativos del Rímac.
+        </p>
+
+        <!-- Video -->
+        <h3 class="video-title">🎥 Video Informativo</h3>
+
+        <video id="videoAguas" width="100%" controls>
+            <source src="videos/aguas.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+
+        <!-- Quiz -->
+        <button id="btnQuiz4" class="btn-form" onclick="goGoogleQuiz4()">
+            Resolver el Quiz
+        </button>
+
+        <!-- Volver -->
+        <button class="btn-form" style="margin-top:20px;" onclick="volverRuta()">
+            ⬅ Volver a la Ruta
+        </button>
+
+        <!-- Siguiente -->
+        <button class="btn-form" style="margin-top:10px;" onclick="irEstacion5()">
+            ➜ Siguiente Estación
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    // Insignia por llegada
+    markBadge("est4_llegada");
+</script>
+
+    <div id="popupInsignia" class="badge-popup">🏅 Insignia obtenida</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estación 2 – Río Rímac</title>
+    <link rel="stylesheet" href="styles.css">
+<script src="./js/scripts.js"></script>
+</head>
+
+<body class="bg-passport">
+
+<div class="timeline-container">
+
+    <h1 class="title-green">🌊 Río Rímac</h1>
+    <h3 class="subtitle">Estación 2 del Rally Cultural</h3>
+
+    <div class="station-box">
+
+        <!-- Imagen de la estación -->
+        <img src="img/rio.jpg" class="station-img">
+
+        <!-- Descripción -->
+        <p class="station-desc">
+            El Río Rímac es conocido como “El Hablador”. Ha sido fuente de vida,
+            historia y cultura para Lima desde su fundación. 
+            Esta estación destaca la importancia del río en el desarrollo de la ciudad.
+        </p>
+
+        <!-- Video informativo -->
+        <h3 class="video-title">🎥 Video Informativo</h3>
+
+        <video id="videoRimac" width="100%" controls>
+            <source src="videos/rimac.mp4" type="video/mp4">
+            Tu navegador no soporta video en HTML5.
+        </video>
+
+        <!-- Botón del Quiz -->
+       <button id="btnQuiz2" class="btn-form" onclick="goGoogleQuiz2()">
+    Resolver el Quiz
+</button>
+
+
+        <!-- Botón Volver a la Ruta -->
+        <button class="btn-form" style="margin-top:20px;" onclick="volverRuta()">
+            ⬅ Volver a la Ruta
+        </button>
+
+        <!-- Botón Siguiente Estación -->
+        <button class="btn-form" style="margin-top:10px;" onclick="irEstacion3()">
+            ➜ Siguiente Estación
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    markBadge("est2_llegada");
+
+    markBadge("est2_quiz");
+
+    function enableQuiz() {
+        if (btn.disabled) {
+            btn.disabled = false;  // Se activa el botón
+            markBadge("est2_video");
+        }
+    }
+
+    // Click asegurado
+    btn.addEventListener("click", goGoogleQuiz2);
+</script>
+
+    <div id="popupInsignia" class="badge-popup">🏅 Insignia obtenida</div>
+
+</body>
+</html>

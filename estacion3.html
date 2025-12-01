@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estación 3 – Alameda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body class="bg-passport">
+
+<div class="timeline-container">
+
+    <h1 class="title-green">🌴 Alameda de los Descalzos</h1>
+    <h3 class="subtitle">Estación 3 del Rally Cultural</h3>
+
+    <div class="station-box">
+
+        <!-- Imagen -->
+        <img src="img/descalzos.jpg" class="station-img">
+
+        <p class="station-desc">
+            La Alameda de los Descalzos es uno de los paseos históricos más antiguos del Rímac.
+            Construida en el siglo XVII, se convirtió en un símbolo cultural y un espacio clave 
+            para caminatas tradicionales, eventos y vida social del distrito.
+        </p>
+
+        <!-- Video informativo -->
+        <h3 class="video-title">🎥 Video Informativo</h3>
+
+        <video id="videoAlameda" width="100%" controls>
+            <source src="videos/alameda.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+
+        <!-- Botón del Quiz -->
+        <button id="btnQuiz3" class="btn-form" onclick="goGoogleQuiz3()">
+            Resolver el Quiz
+        </button>
+
+        <!-- Volver a la ruta -->
+        <button class="btn-form" style="margin-top:20px;" onclick="volverRuta()">
+            ⬅ Volver a la Ruta
+        </button>
+
+        <!-- Siguiente estación -->
+        <button class="btn-form" style="margin-top:10px;" onclick="irEstacion4()">
+            ➜ Siguiente Estación
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    // Insignia por llegar a la Estación 3
+    markBadge("est3_llegada");
+
+    // Si quieres dar insignia por ver el video, descomenta esto:
+    // document.getElementById("videoAlameda").addEventListener("play", () => {
+    //     markBadge("est3_video");
+    // });
+</script>
+
+    <div id="popupInsignia" class="badge-popup">🏅 Insignia obtenida</div>
+</body>
+</html>
